@@ -9,9 +9,6 @@ export default function Player() {
   const handleClick = () => {
     setName(playerName.current.value)
   }
-
-  console.log('asd name',name)
-
   return (
     <section id="player">
       <h2>Welcome {name ?? "unknown entity"}</h2>

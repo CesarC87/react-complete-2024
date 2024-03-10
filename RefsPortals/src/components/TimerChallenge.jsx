@@ -2,8 +2,8 @@ import React, { useRef, useState } from 'react'
 import ResultModal from './ResultModal'
 
 const TimerChallenge = ({title,targetTime}) => {
-    const timer = useRef()
     const dialog = useRef()
+    const timer = useRef()
 
     const [ timeRemaining, setTimeRemaining ] = useState(targetTime*1000)
 
@@ -16,7 +16,6 @@ const TimerChallenge = ({title,targetTime}) => {
     }
 
     const handleStart = () => {
-        // setTimerStarted(true)
         timer.current = setInterval(()=>{
             setTimeRemaining( prev => prev - 10)
         }, 10)

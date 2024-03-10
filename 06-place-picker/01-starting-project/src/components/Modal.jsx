@@ -2,17 +2,19 @@ import { useEffect } from 'react';
 import { forwardRef, useImperativeHandle, useRef } from 'react';
 import { createPortal } from 'react-dom';
 
-const Modal = ({ openModal, children, onClose  }) => {
+const Modal = ({ open, children, onClose  }) => {
   const dialog = useRef(); 
 
   useEffect(()=>{
-    openModal ? dialog.current.showModal() : dialog.current.close();
-    console.log('openModal',openModal)
-  },[openModal])
+    open ? dialog.current.showModal() : dialog.current.close();
+    console.log('open',open)
+  },[open])
+
+  console.log('en modal')
 
   return createPortal(
     <dialog className="modal" ref={dialog} onClose={onClose} >
-      {children}
+      {open ? children : null}
     </dialog>,
     document.getElementById('modal')
   );

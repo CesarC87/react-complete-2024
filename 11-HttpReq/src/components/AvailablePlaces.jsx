@@ -11,15 +11,13 @@ export default function AvailablePlaces({ onSelectPlace }) {
   const [ errorFetch, setErrorFetch ] = useState(false)
   
   useEffect(()=>{
-
     const getPlaces = async () => {
 
       setLoadingData(true)
-
+      
       //* -----> Fetch con async / await
       try {
-        const places = await getAvailablePlaces()       
-
+        const places = await getAvailablePlaces()
         navigator.geolocation.getCurrentPosition( position => {
           let lat = position.coords.latitude
           let lon = position.coords.longitude
@@ -27,14 +25,11 @@ export default function AvailablePlaces({ onSelectPlace }) {
           setAvailablePlaces(sortedPlaces)
           setLoadingData(false)
         })
-
-
       } catch (error) { //* Si el fetch NO pasó - Si hay un Error thrown, el catch dispara lo que seteemos, un redirect por ejemplo
         console.log('catch')
         setErrorFetch({message: error.message || 'No pudimos cargar esta info'})
         setLoadingData(false)
-      }       
-      
+      }      
     }
       //* -----> Fetch con promesa:
       // fetch('http://localhost:3000/places') 
@@ -44,7 +39,6 @@ export default function AvailablePlaces({ onSelectPlace }) {
       //   .then( data => {
       //     setAvailablePlaces(data.places)
       //   })
-
       getPlaces()
   },[])
 

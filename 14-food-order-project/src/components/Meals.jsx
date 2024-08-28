@@ -11,8 +11,6 @@ const Meals = () => {
             loading 
           } = useHttp('http://localhost:3000/meals', requestConfig, [])
 
-          console.log('asd', mealsData)
-          
   return (
     <ul id='meals'>{mealsData.map( meal => {
         return (

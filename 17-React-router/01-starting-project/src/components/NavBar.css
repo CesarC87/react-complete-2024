@@ -1,0 +1,19 @@
+.home-nav{
+    background: linear-gradient(26deg, #990e0e, #2a343f);
+    width: 100%;
+    padding: 24px;
+}
+.home-nav__links{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+    color: white;
+    font-size: larger;
+    font-weight: 500;
+}
+
+.active{
+    /* text-decoration: none; */
+    color: white;
+}

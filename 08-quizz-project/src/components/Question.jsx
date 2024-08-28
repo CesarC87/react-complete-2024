@@ -16,7 +16,6 @@ const Question = ({onSelectAnswer,handleSkipAnswer,index}) => {
     answer.isCorrect !== null && (timer = 2000)
 
     const handleSelectAnswer = (answer) => {
-        console.log('asd')
         setAnswer({
             selectedAnswer:answer,
             isCorrect: null

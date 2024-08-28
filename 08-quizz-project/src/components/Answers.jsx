@@ -2,7 +2,6 @@ import React, { useRef } from 'react'
 
 const Answers = ({answerState,selectedAnswer,answers, handleSelectAnswer}) => {
 
-    console.log('asd handleSelectAnswer', handleSelectAnswer)
 
   const shuffledAnswers = useRef()
 

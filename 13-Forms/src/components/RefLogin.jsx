@@ -14,8 +14,6 @@ export default function RefLogin() {
     const passwordInput = password.current.value
     const emailIsvalid = emailInput.includes('@')
 
-    console.log('asd ',emailIsvalid)
-
     if(!emailIsvalid){
       setEmailInvalid(true)
       return; // Si el email es invalido, termina aca la función con el return

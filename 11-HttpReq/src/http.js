@@ -4,7 +4,6 @@ export const getAvailablePlaces = async () => {
   
         // if(response.ok) 200 o 300
         if(!response.ok){ // 400 o 500
-          console.log('asd', response.status)
           throw new Error('No pudimos cargar todos los lugares') //* Si el fetch pasó pero no tenemos respuesta
         } 
 
@@ -17,7 +16,6 @@ export const getUserPlaces = async () => {
   
         // if(response.ok) 200 o 300
         if(!response.ok){ // 400 o 500
-          console.log('asd', response.status)
           throw new Error('No pudimos cargar tus lugares - catch de getUserPlaces en http') //* Si el fetch pasó pero no tenemos respuesta
         } 
 

@@ -1,2 +1,2 @@
-> _[!NOTE]_
+> [!NOTE]
 > Hola

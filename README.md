@@ -2,44 +2,8 @@
 > Section 21: React-Router
 > function App() {
 
-  const routes = [
-    {
-      path: '/',
-      element: <LayOut/>,
-      children: [ //* --> /...
-        // { path: '', element: <HomePage/>},
-        { index: true, element: <HomePage/>},
-        { 
-          path: 'events', 
-          element: <LayOut2/>,
-          children: [ //* --> /events/...
-            { 
-              index: true, 
-              element: <EventsPage/>,
-              loader: async () => {
-                const response = await fetch('http://localhost:8081/events');
+  ![image](https://github.com/user-attachments/assets/2a8ee340-ae81-4d33-b65e-a7da3ce75417)
 
-                if (!response.ok) {
-                } else {
-                  const resData = await response.json();
-                  return resData.events
-                }
-              }
-            },
-            { path: 'new', element: <NewEventPage/>},
-            { path: ':id', element: <EventDetailPage/>},
-            { path: ':id/edit', element: <EditEventPage/>},
-          ]
-        },
-      ],
-      // errorElement: <ErrorPage/>
-    },
-  ]
-
-  const router = createBrowserRouter(routes)
-
-  return <RouterProvider router={router}/>
-}
 
 > [!TIP]
 > Optional information to help a user be more successful.
